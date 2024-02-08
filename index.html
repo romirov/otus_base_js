@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenWeather</title>
+</head>
+<body>
+    <h1>OpenWeather</h1>
+    <h2>Погода в нашем городе</h2>
+    <pre id="weatherInfoInCurrentCity"></pre>
+
+    <h2>Погода в выбранном городе</h2>
+    <div id="listSavedCities"></div>
+    <form>
+        <input
+          id="userInput"
+          placeholder="Type city and press enter"
+          required
+          autofocus
+        />
+        <button>Get weather</button>
+      </form>
+      <pre id="weatherInfoInSelectedCity"></pre>
+    <script src="src/script.js"></script>
+</body>
+</html>
