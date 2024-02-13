@@ -21,7 +21,7 @@
         el.innerHTML = JSON.stringify(weatherInfo, null, 2);
     }
     
-    function showSavedCities() {
+    function showSavedCities(el) {
         for(let i = 0; i < localStorage.length; i++) {
             listSavedCitiesEl.append(
                 createLinkForSavedCity(localStorage.key(i))
