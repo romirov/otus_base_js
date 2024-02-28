@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/romirov/otus_base_js/issues"
   },
-  "homepage": "https://github.com/romirov/otus_base_js#readme"
+  "homepage": "https://github.com/romirov/otus_base_js#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
