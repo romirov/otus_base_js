@@ -1,32 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OpenWeather</title>
-    <link rel="stylesheet" href="src/styles/style.css">
-</head>
-<body>
-  <div class="weather">
-    <div class="inpuField">
-      <input id="userInput" class="input inputSize" placeholder="Type city and press enter" required autofocus/>
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+  <body>
+    <div class="weather">
+      <div class="inpuField">
+        <input
+          id="userInput"
+          class="input inputSize"
+          placeholder="Type city and press enter"
+          required
+          autofocus
+        />
+      </div>
+
+      <div class="inputFieldButton">
+        <button id="button" class="button inputSize">Show</button>
+      </div>
+
+      <div id="selectedCityMap" class="selectedCityMap"></div>
+
+      <div id="weatherInfoInCurrentCity" class="selectedCityWeather"></div>
+
+      <div class="history">
+        <h1>History</h1>
+      </div>
+
+      <div id="memorizedCities" class="memorizedCities"></div>
     </div>
-
-    <div class="inputFieldButton">
-      <button id="button" class="button inputSize">Show</button>
-    </div>
-
-    <div id="selectedCityMap" class="selectedCityMap"></div>
-
-    <div id="weatherInfoInCurrentCity" class="selectedCityWeather">
-    </div>
-
-    <div class="history">
-      <h1>History</h1>
-    </div>
-
-    <div id="memorizedCities" class="memorizedCities"></div>
-  </div>
-  <script type="module" src="src/script.js"></script>
-</body>
+    <script type="module" src="src/script.js"></script>
+  </body>
 </html>

@@ -1,8 +1,10 @@
 # CI/CD
+
 Мы можем взять типовой workflow для такой проверки. И сделать прохождение такой проверки обязательным на уровне репозитория.
 
 Создаем директорию .github/workflows в корне проекта
-Для проверки кода при коммите в .github/workflows/ создаем sanity-check.yml, в который добавляем 
+Для проверки кода при коммите в .github/workflows/ создаем sanity-check.yml, в который добавляем
+
 ```
 name: PR Sanity Check
 
@@ -28,7 +30,8 @@ jobs:
           npm run test
 ```
 
-Для создания ссылки на CodeSandbox в .github/workflows/ создаем codesandbox-link-comment.yml, в который добавляем 
+Для создания ссылки на CodeSandbox в .github/workflows/ создаем codesandbox-link-comment.yml, в который добавляем
+
 ```
 name: Add codesandbox link
 
@@ -54,7 +57,8 @@ jobs:
             https://githubbox.com/${{ github.repository }}/tree/${{ github.head_ref }}
 ```
 
-Для деплоя на GitHub Pages в .github/workflows/ создаем deploy-to-gh-pages.yml, в который добавляем 
+Для деплоя на GitHub Pages в .github/workflows/ создаем deploy-to-gh-pages.yml, в который добавляем
+
 ```
 name: Deploy to GithubPages
 
