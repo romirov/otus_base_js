@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenWeather</title>
+    <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
-    <h1>OpenWeather</h1>
-    <h2>Погода в нашем городе</h2>
-    <pre id="weatherInfoInCurrentCity"></pre>
+  <div class="weather">
+    <div class="inpuField">
+      <input id="userInput" class="input inputSize" placeholder="Type city and press enter" required autofocus/>
+    </div>
 
-    <h2>Погода в выбранном городе</h2>
-    <div id="listSavedCities"></div>
-    <form>
-        <input
-          id="userInput"
-          placeholder="Type city and press enter"
-          required
-          autofocus
-        />
-        <button>Get weather</button>
-      </form>
-      <pre id="weatherInfoInSelectedCity"></pre>
-    <script src="src/script.js"></script>
+    <div class="inputFieldButton">
+      <button id="button" class="button inputSize">Show</button>
+    </div>
+
+    <div id="selectedCityMap" class="selectedCityMap"></div>
+
+    <div id="weatherInfoInCurrentCity" class="selectedCityWeather">
+    </div>
+
+    <div class="history">
+      <h1>History</h1>
+    </div>
+
+    <div id="memorizedCities" class="memorizedCities"></div>
+  </div>
+  <script type="module" src="src/script.js"></script>
 </body>
 </html>
