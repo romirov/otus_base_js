@@ -1,5 +1,9 @@
 # CI/CD
 Мы можем взять типовой workflow для такой проверки. И сделать прохождение такой проверки обязательным на уровне репозитория.
+
+Создаем директорию .github/workflows в корне проекта
+В .github/workflows/ создаем sanity-check.yml
+В него добавляем 
 ```
 name: PR Sanity Check
 
@@ -24,6 +28,3 @@ jobs:
         run: |
           npm run test
 ```
-
-Создаем директорию .github/workflows в корне проекта
-В .github/workflows/ создаем sanity-check.yml
