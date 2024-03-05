@@ -90,3 +90,18 @@ plugins: ['jest'],
 ```
 'jest/globals': true,
 ```
+
+## Плагин для валидации html eslint-plugin-html
+Установка
+```
+install --save-dev eslint-plugin-html
+```
+
+Добавление плагина в .eslinrc.js
+```
+{
+    "plugins": [
+        "html"
+    ]
+}
+```
