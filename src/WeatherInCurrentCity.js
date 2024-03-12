@@ -9,14 +9,13 @@
  * функция должна возвращать (Promise) данные с информацией о погоде в текущем городе
  *
  */
-// export async function getWeatherInCurrentCity() {
-//     const url = "https://get.geojs.io/v1/ip/geo.json";
-
-//     try {
-//         const response = await fetch(url);
-//         return await response.json();
-//       } catch (error) {
-//         console.error("Error:", error);
-//         return null;
-//       }
-// }
+export async function getWeatherInCurrentCity() {
+  //     const url = "https://get.geojs.io/v1/ip/geo.json";
+  //     try {
+  //         const response = await fetch(url);
+  //         return await response.json();
+  //       } catch (error) {
+  //         console.error("Error:", error);
+  //         return null;
+  //       }
+}

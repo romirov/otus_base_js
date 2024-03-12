@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="src/styles/style.css" />
   </head>
   <body>
-    <div class="weather">
+    <main class="weather">
       <div class="inpuField">
-        <input
-          id="userInput"
-          class="input inputSize"
-          placeholder="Type city and press enter"
-          required
-          autofocus
-        />
-      </div>
-
-      <div class="inputFieldButton">
-        <button id="button" class="button inputSize">Show</button>
+        <form>
+          <input
+            id="userInput"
+            class="input inputSize"
+            placeholder="Type city and press enter"
+            required
+            autofocus
+          />
+          <button id="button" class="button inputSize">Show</button>
+        </form>
       </div>
 
       <div id="selectedCityMap" class="selectedCityMap"></div>
@@ -27,11 +26,11 @@
       <div id="selectedCityWeather" class="selectedCityWeather"></div>
 
       <div class="history">
-        <h1>History</h1>
+        <p>History</p>
+        <ul id="memorizedCities" class="memorizedCities">
+        </ul>
       </div>
-
-      <div id="memorizedCities" class="memorizedCities"></div>
-    </div>
+    </main>
     <script type="module" src="src/script.js"></script>
   </body>
 </html>

@@ -8,10 +8,10 @@ html {
 
 .weather {
   display: grid;
-  grid-template-columns: repeat(3, 32.5rem) 22rem;
+  grid-template-columns: 32.5rem 22rem;
   grid-template-rows: 8rem 40rem;
   width: 1450px;
-  margin: 0 auto;
+  margin: 5rem 30rem;
 }
 
 .inpuField {
@@ -21,18 +21,19 @@ html {
 
 .inputSize {
   height: 2.1rem;
-  width: 25.1rem;
+  width: 15.1rem;
 }
 
 .inpuFieldButton {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 1/2;
 }
 
 .history {
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 1/2;
   text-decoration: underline 2px grey;
+  font-size: 2rem;
 }
 
 .selectedCityMap {
@@ -41,11 +42,11 @@ html {
 }
 
 .selectedCityWeather {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2/2;
 }
 
 .memorizedCities {
-  grid-column: 3;
+  grid-column: 2;
   grid-row: 2/2;
 }
