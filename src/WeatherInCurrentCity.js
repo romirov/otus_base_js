@@ -1,21 +1,40 @@
+import { getWeatherInSelectedCity } from "./WeatherInSelectedCity";
+
 /**
  * Функция должна делать запрос на
- * https://api.openweathermap.org/data/2.5/weather?units=metric&q={{CITY_NAME}}&appid={{APP_ID}}
- * где
- *  {{CITY_NAME}} должен быть заменен на имя города
- *  {{APP_ID}} должен быть заменен на ключ приложения
- * Запрос возвращает данные в формате JSON
+ * https://get.geojs.io/v1/ip/geo.json
  *
- * функция должна возвращать (Promise) данные с информацией о погоде в текущем городе
+ * Запрос возвращает данные о текущем городе по ip пользователя в формате JSON
  *
+ * Функция должна возвращать (Promise)
  */
+async function getCurrentLocationInformationByIp() {
+  const url = "https://get.geojs.io/v1/ip/geo.json";
+  try {
+    const response = await fetch(url);
+    return response.json();
+  } catch (error) {
+    // eslint-disable-next-line max-len, no-console
+    console.error(
+      "Could`t find current location information by ip, because:",
+      error,
+    );
+    return null;
+  }
+}
+
+/**
+ * Функция получает информацию о текущем местоположении пользователя по ip
+ * и при помощи ее получает информацию о погоде
+ *
+ * Функция возвращает (Promise) данные с информацией о погоде в текущем местоположении
+ */
+
 export async function getWeatherInCurrentCity() {
-  //     const url = "https://get.geojs.io/v1/ip/geo.json";
-  //     try {
-  //         const response = await fetch(url);
-  //         return await response.json();
-  //       } catch (error) {
-  //         console.error("Error:", error);
-  //         return null;
-  //       }
+  const currentLocation = await getCurrentLocationInformationByIp();
+  // eslint-disable-next-line max-len
+  const weatherInCurrentCity = await getWeatherInSelectedCity(
+    currentLocation.city,
+  );
+  return weatherInCurrentCity;
 }

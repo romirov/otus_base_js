@@ -6,19 +6,23 @@
  *  {{APP_ID}} должен быть заменен на ключ приложения
  * Запрос возвращает данные в формате JSON
  *
- * функция должна возвращать (Promise) данные с информацией о погоде в выбранном городе
+ * Функция должна возвращать (Promise) данные с информацией о погоде в выбранном городе
  * @param {string} cityName
  */
-// export async function getWeatherInSelectedCity(cityName) {
-//     const apiKey = "7881bfb7be02c74633e5fdee4ff41329";
-//     const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${cityName}&appid=${apiKey}`;
+export async function getWeatherInSelectedCity(cityName) {
+  const apiKey = "7881bfb7be02c74633e5fdee4ff41329";
+  // eslint-disable-next-line max-len
+  const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${cityName}&appid=${apiKey}`;
 
-//     try {
-//       const response = await fetch(url);
-//       return await response.json();
-//     } catch (error) {
-//       console.error("Error:", error);
-//    return null;
-//     }
-
-// }
+  try {
+    const response = await fetch(url);
+    return await response.json();
+  } catch (error) {
+    // eslint-disable-next-line max-len, no-console
+    console.error(
+      "Could`t find current location information by ip, because:",
+      error,
+    );
+    return null;
+  }
+}
