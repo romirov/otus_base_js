@@ -94,3 +94,19 @@ devServer: {
 ```
 npm run dev
 ```
+
+### Добавление html-webpack-plugin
+Установка
+```
+npm install --save-dev html-webpack-plugin
+```
+
+Конфигурирование:
+в webpack.config.js добавляем
+```
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+и
+plugins: [new HtmlWebpackPlugin()]
+```
+
+Теперь если запустить npm run build, то автоматически появится папка dist и файл index.html
