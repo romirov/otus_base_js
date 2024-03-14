@@ -12,7 +12,9 @@
     "lint": "prettier --check . && eslint .",
     "lint:fix": "prettier --write . && eslint . --fix",
     "prepare": "husky install",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack serve --open --mode=development"
   },
   "repository": {
     "type": "git",
@@ -44,7 +46,8 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.3"
   },
   "lint-staged": {
     "*.js": "eslint --fix",

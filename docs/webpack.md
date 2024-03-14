@@ -50,3 +50,47 @@ npx webpack
 npm run build
 ```
 то запустится webpack и в папке dist создастся main.js
+
+
+### Добавление webpack.config.js
+Добавляем в корень проекта webpack.config.js
+В него копируем:
+```
+const path = require('path');
+
+module.exports = {
+  entry: './src/script.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+};
+```
+
+### Добавление webpack dev server
+Установка
+```
+npm i webpack-dev-server --save-dev
+```
+
+Добавляем в package.json в секцию scripts
+```
+"watch": "webpack --watch"
+```
+Для конфигурации dev сервера добавляем в webpack.config.js
+```
+devServer: {
+    static: './dist',
+  }
+```
+и в package.json в секцию scripts
+```
+"dev": "webpack serve --open --mode=development",
+```
+
+в webpack.config.js
+
+Далее можно запускать
+```
+npm run dev
+```
