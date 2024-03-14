@@ -28,3 +28,25 @@ npm install webpack webpack-cli --save-dev
   "directories": {
     ...
 ```
+
+### Настройки для создания бандла(код для браузера, собранный из файлов js в проекте)
+Переносим index.html из корня в папку dist
+Меняем в теге script название скрипта c src/script.js на main.js
+
+### Получение бандла
+Запустить 
+```
+npx webpack
+```
+После запуска команды в папке dist/ появится main.js
+
+Добавляем в package.json в секцию scripts:
+```
+"build": "webpack"
+```
+
+После этого, если запустить
+```
+npm run build
+```
+то запустится webpack и в папке dist создастся main.js
