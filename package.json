@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "## Описание веток с заданиями",
   "main": "src/script.js",
+  "private": true,
   "directories": {
     "doc": "docs"
   },
