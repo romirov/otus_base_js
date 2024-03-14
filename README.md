@@ -10,3 +10,4 @@
 ### [Унификация стиля кода](docs/prettier.md)
 ### [Фильтрация кода перед git commit](docs/stage.md)
 ### [CI/CD](docs/pipeline.md)
+### [Webpack](docs/webpack.md)
