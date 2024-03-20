@@ -79,4 +79,11 @@ jobs:
           folder: dist # The folder the action should deploy.
 ```
 
-Так как при запуске npm run build отрабатывает webpack, создавая папку dist(см [webpack.md](webpack.md)), то в поле folder надо прописать dist
+Так как при запуске npm run build отрабатывает webpack, создавая папку dist(см [webpack.md](webpack.md)), то в поле folder надо прописать dist.
+
+Когда произойдет git push, на github во вкладке Actions проекта отработают линтеры, и в ветках проекта можно будет увидеть ветку gh-pages.
+
+Дальше необходимо пойти во вкладку Settings проекта --> Pages --> поле Branch --> в ветке branch указываем gh-branch
+
+### Создание badge
+После того, как ветка задеплоена можно перейти в Action --> All workflows --> открыть workflow с deploy --> нажать на кнопку с `...` рядом с Re-run all jobs справа и выбрать Create status badge --> Нажимаем на Copy status badge Markdown --> Добавляем полученный код в README

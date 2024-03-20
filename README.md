@@ -9,5 +9,5 @@
 ### [Поиск ошибок в коде](docs/linter.md)
 ### [Унификация стиля кода](docs/prettier.md)
 ### [Фильтрация кода перед git commit](docs/stage.md)
-### [CI/CD](docs/pipeline.md)
+### [CI/CD](docs/deploy.md)
 ### [Webpack](docs/webpack.md)
