@@ -76,5 +76,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # The folder the action should deploy.
+          folder: dist # The folder the action should deploy.
 ```
+
+Так как при запуске npm run build отрабатывает webpack, создавая папку dist(см [webpack.md](webpack.md)), то в поле folder надо прописать dist
