@@ -108,5 +108,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 и
 plugins: [new HtmlWebpackPlugin()]
 ```
+Для добавления дополнительной разметки необходимо в настройки 
+webpack.config.js добавить строку template(подробнее про настройки плагина на https://github.com/jantimon/html-webpack-plugin?tab=readme-ov-file#options)
+Написание собственных шаблонов
+Если сгенерированный по умолчанию HTML-код не соответствует вашим потребностям, вы можете предоставить свой собственный шаблон. Самый простой способ — использовать эту templateопцию и передать собственный HTML-файл. Плагин html-webpack-plugin автоматически внедрит в разметку все необходимые файлы CSS, JS, манифеста и значков.
+
+Подробности о других загрузчиках шаблонов документированы здесь https://github.com/jantimon/html-webpack-plugin#options.
+
+plugins: [
+  new HtmlWebpackPlugin({
+    title: "Custom template",
+    // Load a custom template (lodash by default)
+    template: "index.html",
+  }),
+];
+
+
 
 Теперь если запустить npm run build, то автоматически появится папка dist и файл index.html
+Поэтому добавляем dist в .gitignore
