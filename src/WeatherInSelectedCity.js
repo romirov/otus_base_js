@@ -6,8 +6,9 @@
  *  {{APP_ID}} должен быть заменен на ключ приложения
  * Запрос возвращает данные в формате JSON
  *
- * Функция должна возвращать (Promise) данные с информацией о погоде в выбранном городе
  * @param {string} cityName
+ * @returns объект с информацией о погоде в выбранном городе
+ *
  */
 export async function getWeatherInSelectedCity(cityName) {
   const apiKey = "7881bfb7be02c74633e5fdee4ff41329";

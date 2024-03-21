@@ -1,17 +1,68 @@
-import { getWeatherInSelectedCity } from "./WeatherInSelectedCity";
 import { getWeatherInCurrentCity } from "./WeatherInCurrentCity";
+import { getWeatherInSelectedCity } from "./WeatherInSelectedCity";
 // eslint-disable-next-line max-len
 import {
   saveCityToLocalStorage,
   getCitiesFromLocalStorage,
 } from "./LocalStorageHandler";
+import { outputWeatherToHtml } from "./OutputWeatherToHtml";
 
 // eslint-disable-next-line func-names
 (async function () {
-  getWeatherInSelectedCity("");
-  getWeatherInCurrentCity();
-  saveCityToLocalStorage("");
-  getCitiesFromLocalStorage();
+  // вывод погоды в текущем городе
+  const currentLocationWeather = getWeatherInCurrentCity();
+  outputWeatherToHtml(currentLocationWeather);
+
+  // получение через форму, сохранение и вывод погоды в введенном городе
+  const button = document.getElementById("button");
+
+  button.addEventListener("click", () => {
+    const inputEl = document.getElementById("userInput");
+    // eslint-disable-next-line no-console
+    if (!inputEl.innerText) {
+      // eslint-disable-next-line no-alert
+      alert("В поле userInput ничего не введено!");
+    } else {
+      const selectedCityName = inputEl.innerText;
+      // eslint-disable-next-line no-console
+      console.log(`Ввели город ${selectedCityName}`);
+      saveCityToLocalStorage(selectedCityName);
+
+      const selectedCityWeather = getWeatherInSelectedCity(selectedCityName);
+      outputWeatherToHtml(selectedCityWeather);
+    }
+
+    button.removeEventListener("click");
+  });
+
+  // вывод сохраненных городов
+  const memorizedCitiesEl = document.getElementById("memorizedCities");
+  const memorizedCities = getCitiesFromLocalStorage();
+
+  memorizedCities.forEach((city) => {
+    const liEl = document.createElement("li");
+    const aEl = document.createElement("a");
+
+    aEl.href = "";
+    aEl.setAttribute("id", "link");
+    aEl.innerText = city;
+    aEl.addEventListener("click", () => {
+      // eslint-disable-next-line no-console
+      console.log(`Нажали на ссылку с сохраненным городом ${city}`);
+      outputWeatherToHtml(city);
+
+      aEl.removeEventListener("click");
+    });
+
+    liEl.appendChild(aEl);
+    memorizedCitiesEl(liEl);
+  });
+
+  // getWeatherInCurrentCity();
+
+  // getWeatherInSelectedCity("");
+  // saveCityToLocalStorage("");
+  // getCitiesFromLocalStorage();
 
   //     // Получаем указатели на нужные элементы
   //     const formEl = document.querySelector("form");

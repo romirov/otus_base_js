@@ -1,5 +1,10 @@
 const AMOUNT_SAVED_CITIES = 10;
 
+/**
+ * Функция сохраняет город в localStorage
+ *
+ * @param {string} cityName
+ */
 export function saveCityToLocalStorage(cityName) {
   const amountCities = localStorage.length;
   // не сохраняем город, если он уже сохранен
@@ -16,6 +21,10 @@ export function saveCityToLocalStorage(cityName) {
   }
 }
 
+/**
+ * Функция получет города из localStorage
+ * @returns массив городов
+ */
 export function getCitiesFromLocalStorage() {
   return { ...localStorage };
 }
