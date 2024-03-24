@@ -1,11 +1,15 @@
-import { getWeatherInCurrentCity } from "./WeatherInCurrentCity";
-import { getWeatherInSelectedCity } from "./WeatherInSelectedCity";
-// eslint-disable-next-line max-len
+// eslint-disable-next-line import/extensions
+import { getWeatherInCurrentCity } from "./WeatherInCurrentCity.js";
+// eslint-disable-next-line import/extensions
+import { getWeatherInSelectedCity } from "./WeatherInSelectedCity.js";
+// eslint-disable-next-line import/extensions, max-len
 import {
   saveCityToLocalStorage,
   getCitiesFromLocalStorage,
-} from "./LocalStorageHandler";
-import { outputWeatherToHtml } from "./OutputWeatherToHtml";
+  // eslint-disable-next-line import/extensions
+} from "./LocalStorageHandler.js";
+// eslint-disable-next-line import/extensions
+import { outputWeatherToHtml } from "./OutputWeatherToHtml.js";
 
 // eslint-disable-next-line func-names
 (async function () {

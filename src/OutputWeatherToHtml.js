@@ -1,4 +1,5 @@
-import { getStaticMapByCoordinate } from "./StaticApiHandler";
+// eslint-disable-next-line import/extensions
+import { getStaticMapByCoordinate } from "./StaticApiHandler.js";
 
 /**
  * Функция выводит карту и погоду в html

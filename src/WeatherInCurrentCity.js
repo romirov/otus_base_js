@@ -1,4 +1,5 @@
-import { getWeatherInSelectedCity } from "./WeatherInSelectedCity";
+// eslint-disable-next-line import/extensions
+import { getWeatherInSelectedCity } from "./WeatherInSelectedCity.js";
 
 /**
  * Функция должна делать запрос на
