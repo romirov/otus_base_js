@@ -21,3 +21,5 @@
 ### [CI/CD](docs/deploy.md)
 
 ### [Webpack](docs/webpack.md)
+
+### [Веб-сервер](docs/web_server.md)
