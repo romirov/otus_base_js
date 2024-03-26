@@ -21,7 +21,7 @@ export async function getWeatherInSelectedCity(cityName) {
   } catch (error) {
     // eslint-disable-next-line max-len, no-console
     console.error(
-      "Could`t find current location information by ip, because:",
+      `Could not find current location information by ${cityName}, because:`,
       error,
     );
     return null;

@@ -1,3 +1,8 @@
+// eslint-disable-next-line import/extensions
+import { outputWeatherToHtml } from "./OutputWeatherToHtml.js";
+// eslint-disable-next-line import/extensions
+import { getWeatherInSelectedCity } from "./WeatherInSelectedCity.js";
+
 const AMOUNT_SAVED_CITIES = 10;
 
 /**
@@ -26,5 +31,35 @@ export function saveCityToLocalStorage(cityName) {
  * @returns массив городов
  */
 export function getCitiesFromLocalStorage() {
-  return { ...localStorage };
+  return Object.keys(localStorage);
+}
+
+/**
+ * Функция выводит сохраненные города
+ */
+export function outputCitiesFromLocalStorage() {
+  // вывод сохраненных городов
+  const memorizedCitiesEl = document.getElementById("memorizedCities");
+  const memorizedCities = getCitiesFromLocalStorage();
+  console.log(memorizedCities);
+  if (memorizedCities.length > 0) {
+    memorizedCities.forEach((city) => {
+      const liEl = document.createElement("li");
+      const aEl = document.createElement("a");
+
+      aEl.href = "";
+      aEl.setAttribute("id", "link");
+      aEl.innerText = city;
+      aEl.addEventListener("click", async (event) => {
+        event.preventDefault();
+        // eslint-disable-next-line no-console
+        console.log(`Нажали на ссылку с сохраненным городом ${city}`);
+        const weather = await getWeatherInSelectedCity(city);
+        outputWeatherToHtml(weather);
+      });
+
+      liEl.appendChild(aEl);
+      memorizedCitiesEl.appendChild(liEl);
+    });
+  }
 }

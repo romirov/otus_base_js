@@ -12,7 +12,9 @@ import { getWeatherInSelectedCity } from "./WeatherInSelectedCity.js";
 async function getCurrentLocationInformationByIp() {
   const url = "https://get.geojs.io/v1/ip/geo.json";
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      mode: "cors",
+    });
     return response.json();
   } catch (error) {
     // eslint-disable-next-line max-len, no-console

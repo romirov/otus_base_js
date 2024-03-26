@@ -39,11 +39,15 @@ html {
 .selectedCityMap {
   grid-column: 1;
   grid-row: 2/2;
+  position: relative;
+  right: 7rem;
 }
 
 .selectedCityWeather {
   grid-column: 1;
   grid-row: 2/2;
+  position: relative;
+  left: 10rem;
 }
 
 .memorizedCities {

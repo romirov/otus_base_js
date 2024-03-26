@@ -9,15 +9,9 @@
   <body>
     <main class="weather">
       <div class="inpuField">
-        <form>
-          <input
-            id="userInput"
-            class="input inputSize"
-            placeholder="Type city and press enter"
-            required
-            autofocus
-          />
-          <button id="button" class="button inputSize">Show</button>
+        <form id="applicationForm" action="/?" method="POST">
+          <input type="text" id="userInput" class="input inputSize" placeholder="Paris" required autofocus>
+          <button type="submit" id="button" class="button inputSize">Show</button>
         </form>
       </div>
 
@@ -31,5 +25,4 @@
       </div>
     </main>
     <script type="module" src="src/script.js"></script>
-  </body>
 </html>
