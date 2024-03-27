@@ -1,11 +1,13 @@
 # Поиск ошибок в коде
 
 ## Установка ESLint
+
 ```
 npm i eslint -D
 ```
 
 ## Инициализация ESLint
+
 ```
 npx eslint --init
 
@@ -30,17 +32,21 @@ eslint-config-airbnb-base@latest eslint@^7.32.0 || ^8.2.0 eslint-plugin-import@^
 ```
 
 ## Для запуска и проверки
+
 или
+
 ```
 npx eslint file.js
 ```
 
 или
+
 ```
 npx eslint .
 ```
 
 для проверки
+
 ```
 npx eslint file.js --fix
 ```
@@ -48,6 +54,7 @@ npx eslint file.js --fix
 ## Добавление в package.json
 
 В раздел scripts
+
 ```
 "scripts": {
     "test": "jest",
@@ -57,47 +64,59 @@ npx eslint file.js --fix
 ```
 
 ## Запуск проверки после добавления eslint в package.json
+
 ```
 npm run lint
 ```
 
 ## Запуск фикса ошибок проверки после добавления eslint в package.json
+
 ```
 npm run lint:fix
 ```
 
 Добавление правила для комментариев .eslintrc.js в секцию rules
+
 ```
 'max-len': ['error', { ignoreComments: true }],
 ```
 
 Фикс prefer-default-export
+
 ```
 'import/prefer-default-export': 'off'
 ```
+
 ## Плагин Jest для EsLint
+
 Установка плагина для Jest
+
 ```
 npm i eslint-plugin-jest -D
 ```
 
 Добавление в .eslinrc.js в секцию plugins
+
 ```
 plugins: ['jest'],
 ```
 
 Добавление в .eslinrc.js в секцию env
+
 ```
 'jest/globals': true,
 ```
 
 ## Плагин для валидации html eslint-plugin-html
+
 Установка
+
 ```
 install --save-dev eslint-plugin-html
 ```
 
 Добавление плагина в .eslinrc.js
+
 ```
 {
     "plugins": [
