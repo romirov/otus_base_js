@@ -24,7 +24,7 @@ export async function outputWeatherToHtml(weather) {
     removeAllChildNodes(selectedCityWeatherEl);
 
   const imgEl = document.createElement("img");
-
+  imgEl.setAttribute("id", "map");
   // eslint-disable-next-line max-len
   imgEl.src = await getStaticMapByCoordinate(
     weather.coord.lat,
@@ -32,13 +32,17 @@ export async function outputWeatherToHtml(weather) {
   );
 
   const pCityNameEl = document.createElement("p");
+  pCityNameEl.setAttribute("id", "cityName");
   // eslint-disable-next-line max-len
   pCityNameEl.textContent = `City: ${cityName}`;
+
   const pCityWeatherEl = document.createElement("p");
+  pCityWeatherEl.setAttribute("id", "cityWeather");
   // eslint-disable-next-line max-len
   pCityWeatherEl.textContent = `Temperature: ${Math.round(temp)} ℃`;
 
   const imgWeatherEl = document.createElement("img");
+  imgWeatherEl.setAttribute("id", "cityWeatherImg");
   imgWeatherEl.src = `http://openweathermap.org/img/wn/${imgWeather}.png`;
 
   selectedCityMapEl.append(imgEl);

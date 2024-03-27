@@ -41,7 +41,7 @@ export function outputCitiesFromLocalStorage() {
   // вывод сохраненных городов
   const memorizedCitiesEl = document.getElementById("memorizedCities");
   const memorizedCities = getCitiesFromLocalStorage();
-  console.log(memorizedCities);
+
   if (memorizedCities.length > 0) {
     memorizedCities.forEach((city) => {
       const liEl = document.createElement("li");

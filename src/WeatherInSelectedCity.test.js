@@ -1,14 +1,17 @@
-// import {getWeatherInSelectedCity} from './WeatherInSelectedCity'
+// eslint-disable-next-line import/extensions
+import { getWeatherInSelectedCity } from "./WeatherInSelectedCity.js";
 
-// describe("getWeatherInSelectedCity", () => {
-//     it("get weather in selected city test", () => {
-//         console.log(await getWeatherInSelectedCity('Moscow'));
-//         expect( getWeatherInSelectedCity('Moscow') ).toBeNull();
-//     });
-// });
-
-describe("getWeatherInSelectedCity", () => {
-  it("get weather in selected city test", () => {
-    expect(2 ** 3).toBe(8);
+describe("get weather in selected city test", () => {
+  test("get weather in selected city test", async () => {
+    const selectedCityWeather = {
+      temp: 20,
+    };
+    global.fetch = jest.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve(selectedCityWeather),
+      }),
+    );
+    jest.fn("./getWeatherInSelectedCity").mockReturnValue("test");
+    expect(await getWeatherInSelectedCity("test")).toBe(selectedCityWeather);
   });
 });
