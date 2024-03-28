@@ -18,10 +18,12 @@ module.exports = {
       template: "index.html",
     }),
   ],
-  rules: [
-    {
-      test: /\.css$/i,
-      use: ["style-loader", "css-loader"],
-    },
-  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };
