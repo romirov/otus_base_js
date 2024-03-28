@@ -1,30 +1,35 @@
 # Унификация стиля кода
 
 ## Установка Prettier
+
 ```
 npm i prettier -D
 ```
 
 ## Создание файле конфигурации
+
 ```
 touch .prettierrc.json
 echo {} > .prettierrc.json
 ```
 
 ## Интеграция Prettier c ESLint
+
 ```
 npm install --save-dev eslint-config-prettier
 ```
 
 Добавление в .eslintrc.js в секцию extends
+
 ```
 extends: [
-    'airbnb-base', 
+    'airbnb-base',
     'prettier'
   ],
 ```
 
 Добавление в package.json в секцию scripts
+
 ```
 "scripts": {
     "test": "jest",

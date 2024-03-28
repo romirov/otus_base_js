@@ -1,11 +1,13 @@
 # Тестирование
 
 ## Установка jest
+
 ```
 npm install jest @types/jest -D
 ```
 
 ## Инициализация
+
 ```
 npx jest --init
 
@@ -24,6 +26,7 @@ The following questions will help Jest to create a suitable configuration for yo
 ```
 
 ## Добавление скрипта в package.json(происходит автоматически после предыдущей команды)
+
 ```
 "scripts": {
     "test": "jest"
@@ -31,21 +34,25 @@ The following questions will help Jest to create a suitable configuration for yo
 ```
 
 ## Установка jest-environment-jsdom
+
 ```
 npm i jest-environment-jsdom -D
 ```
 
 ## Установка Babel
+
 ```
 npm install --save-dev babel-jest @babel/core @babel/preset-env
 ```
 
 ## Создание Babel config
+
 ```
 touch babel.config.js
 ```
 
 ## Добавление в babel.config.js
+
 ```
 module.exports = {
   presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
@@ -54,10 +61,13 @@ module.exports = {
 ```
 
 ## Запуск теста
+
 ```
 npm test
 ```
+
 или запуск бинарника, который запустит тесты
+
 ```
 npx jest
 ```
