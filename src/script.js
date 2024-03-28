@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-unused-vars
+import css from "./styles/style.css";
+
 // eslint-disable-next-line import/extensions
 import { getWeatherInCurrentCity } from "./WeatherInCurrentCity.js";
 // eslint-disable-next-line import/extensions
