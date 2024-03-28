@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenWeather</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <h1>Трёхколоночный трехстраничный веб-сайт</h1>
+      <p>Сайт сделан на основе типового веб-макета</p>
+      <img src="./src/imgs/Трёхколоночный_типовой_веб-макет.png" alt="Типовой веб-макет">
+      <nav>
+        <ul>
+            <li><a href="index.html">Первая страница</a></li>
+            <li><a href="article.html">Вторая страница</a></li>
+            <li><a href="chat.html">Третья страница</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class='chat'>
+        <div class='chat-messages'>
+            <div class='chat-messages__content' id='messages'>
+                Загрузка...
+            </div>
+        </div>
+            
+        <div class='chat-input'>
+            <form method='post' id='chat-form'>
+                <input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение'> <input type='submit' class='chat-form__submit' value='=>'>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+      &copy; Copyright 2024 TTWeb-site
+    </footer>
+  </body>
+</html>

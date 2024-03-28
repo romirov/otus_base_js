@@ -7,33 +7,43 @@
     <link rel="stylesheet" href="src/styles/style.css" />
   </head>
   <body>
-    <main class="weather">
-      <div class="inpuField">
-        <form id="applicationForm" action="/?" method="POST">
-          <input
-            type="text"
-            id="userInput"
-            class="input inputSize"
-            placeholder="Paris"
-            required
-            autofocus
-          />
-          <button type="submit" id="button" class="button inputSize">
-            Show
-          </button>
-        </form>
-      </div>
+    <header id="header" class="header">
+      <h1>Трёхколоночный трехстраничный веб-сайт</h1>
+      <p>Сайт сделан на основе типового веб-макета</p>
+      <img src="./src/imgs/Трёхколоночный_типовой_веб-макет.png" alt="Типовой веб-макет">
+      <nav>
+        <ul>
+          <li><a href="index.html">Первая страница</a></li>
+          <li><a href="article.html">Вторая страница</a></li>
+          <li><a href="chat.html">Третья страница</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <div id="selectedCityMap" class="selectedCityMap"></div>
+      <h2>Статьи</h2>
+      <section id="indexLeft" class="indexLeft">
+        <h3>Кылыч-Арслан II</h3>
+        <p>
+          Кылы́ч-Арсла́н II (осман. قلج أرسلان‎ , тур. Kılıç Arslan; ум. 1192) — сельджукский султан Рума в 1156—1192 годах, старший сын султана Месуда I.
+        </p>
+      </section>
 
-      <div id="selectedCityWeather" class="selectedCityWeather"></div>
+      <section id="indexCenter" class="indexCenter">
+        <h3>Five Nights at Freddy’s: Security Breach</h3>
+        <p>
+          Five Nights at Freddy’s: Security Breach (с англ. — «Пять ночей у Фредди: Нарушение безопасности») — независимая компьютерная игра в жанре survival horror, разработанная и выпущенная в 2021 году канадской командой разработчиков Steel Wool Studios и американским игровым дизайнером Скоттом Коутоном. Игра является девятой основной частью серии Five Nights at Freddy’s и тринадцатой во франшизе в целом. Действие Security Breach проходит в большом торговом центре, игрок управляет маленьким мальчиком Грегори, который должен дожить до утра, избегая враждебных аниматроников, являющимися талисманами центра, и охранницу Ванессу. В сравнении с предыдущими частями Five Nights at Freddy’s, игра претерпела огромные изменения в игровом процессе — игрок теперь может свободно перемещаться по торговому центру.
+        </p>
+      </section>
 
-      <div class="history">
-        <p>History</p>
-        <ul id="memorizedCities" class="memorizedCities"></ul>
-      </div>
-    </main>
-    <!-- <script type="module" src="src/script.js"></script> -->
-    <script type="module" src="main.js"></script>
+      <section id="indexRight" class="indexRight">
+        <h3>Конституция животных</h3>
+        <p>
+          Конститу́ция живо́тных (лат. constitutio animalium, от constitutio, «строение», «организация», и animal, «животное»[1]) — совокупность наиболее важных и относительно устойчивых морфологических и физиологических особенностей сельскохозяйственных особей[2], «общее строение индивида животного»[3]. Конституция складывается на основе наследственных факторов, но в значительной степени зависит и от условий среды обитания животного[2][3]. В зоотехнической практике изучение конституции животных имеет важное практическое значение[3].
+        </p>
+      </section>
+
+    <footer id="footer" class="footer">
+      &copy; Copyright 2024 TTWeb-site
+    </footer>
   </body>
 </html>
