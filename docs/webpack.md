@@ -152,20 +152,22 @@ template: "index.html",
 Теперь если запустить npm run build, то автоматически появится папка dist и файл index.html
 Поэтому добавляем dist в .gitignore
 
-
 ### Добавление css-loader и style-loader
 
 Установка
+
 ```
 npm install --save-dev style-loader css-loader
 ```
 
 Добавляем строку в script.js
+
 ```
 import css from "style.css";
 ```
 
 Добавляем строки в webpack.config.js
+
 ```
 rules: [
     {
