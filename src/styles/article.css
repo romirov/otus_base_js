@@ -5,3 +5,25 @@
 html {
   font-size: 16px;
 }
+
+.secondPageHeader {
+  margin-bottom: 2rem;
+}
+
+.secondPageHH {
+  margin-left: 40rem;
+}
+
+.secondPageMain {
+  margin-bottom: 40rem;
+  width: 1750px;
+}
+
+.articleHeader {
+  margin-left: 45rem;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  margin-left: 50rem;
+}

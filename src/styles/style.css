@@ -7,13 +7,16 @@ html {
 }
 
 .firstPagesHeader {
+  margin-bottom: 2rem;
+}
+
+.firstPagesHH {
   margin-left: 40rem;
 }
 
 .articlesHeader {
   margin-left: 55rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
 .articles {
