@@ -6,51 +6,34 @@ html {
   font-size: 16px;
 }
 
-.weather {
+.firstPagesHeader {
+  margin-left: 40rem;
+}
+
+.articlesHeader {
+  margin-left: 55rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.articles {
   display: grid;
-  grid-template-columns: 32.5rem 22rem;
-  grid-template-rows: 8rem 40rem;
-  width: 1450px;
-  margin: 5rem 30rem;
+  grid-template-columns: repeat(3, 35rem);
+  grid-template-rows: 15rem, 100rem;
+  width: 1750px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 25rem;
 }
 
-.inpuField {
-  grid-column: 1;
-  grid-row: 1/2;
+.gridItem {
+  text-align: center;
 }
 
-.inputSize {
-  height: 2.1rem;
-  width: 15.1rem;
+.gridItemHeader {
+  margin-bottom: 1rem;
 }
 
-.inpuFieldButton {
-  grid-column: 1;
-  grid-row: 1/2;
-}
-
-.history {
-  grid-column: 2;
-  grid-row: 1/2;
-  text-decoration: underline 2px grey;
-  font-size: 2rem;
-}
-
-.selectedCityMap {
-  grid-column: 1;
-  grid-row: 2/2;
-  position: relative;
-  right: 7rem;
-}
-
-.selectedCityWeather {
-  grid-column: 1;
-  grid-row: 2/2;
-  position: relative;
-  left: 10rem;
-}
-
-.memorizedCities {
-  grid-column: 2;
-  grid-row: 2/2;
+.footer {
+  margin-left: 50rem;
 }
