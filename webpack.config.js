@@ -16,16 +16,19 @@ module.exports = {
       title: "Base template",
       // Load a custom template
       template: "index.html",
+      chunks: ["index"],
     }),
     new HtmlWebpackPlugin({
       title: "Article template",
       // Load a custom template
       template: "article.html",
+      chunks: ["article"],
     }),
     new HtmlWebpackPlugin({
       title: "Chat template",
       // Load a custom template
       template: "chat.html",
+      chunks: ["chat"],
     }),
   ],
   module: {
