@@ -3,7 +3,11 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: ["./src/script.js", "./src/article.js", "./src/chat.js"],
+  entry: {
+    index: "./src/script.js",
+    article: "./src/article.js",
+    chat: "./src/chat.js",
+  },
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
