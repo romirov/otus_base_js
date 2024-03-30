@@ -3,36 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenWeather</title>
+    <title>Трёхколоночный трехстраничный веб-сайт</title>
     <link rel="stylesheet" href="src/styles/chat.css" />
   </head>
   <body>
-    <header id="header" class="header">
-      <h1>Трёхколоночный трехстраничный веб-сайт</h1>
-      <p>Сайт сделан на основе типового веб-макета</p>
-      <img src="./src/imgs/Трёхколоночный_типовой_веб-макет.png" alt="Типовой веб-макет">
+    <header id="thirdPageHeader" class="thirdPageHeader">
+      <h1 id="thirdPageHH" class="thirdPageHH">Трёхколоночный трехстраничный веб-сайт</h1>
       <nav>
-        <ul>
-            <li><a href="index.html">Первая страница</a></li>
-            <li><a href="article.html">Вторая страница</a></li>
-            <li><a href="chat.html">Третья страница</a></li>
-        </ul>
+        <a href="index.html">Первая страница</a>
+        <a href="article.html">Вторая страница</a>
+        <a href="chat.html">Третья страница</a>
       </nav>
     </header>
 
-    <div class='chat'>
-        <div class='chat-messages'>
-            <div class='chat-messages__content' id='messages'>
-                Загрузка...
-            </div>
-        </div>
-            
-        <div class='chat-input'>
-            <form method='post' id='chat-form'>
-                <input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение'> <input type='submit' class='chat-form__submit' value='=>'>
-            </form>
-        </div>
-    </div>
+    <main id="thirdPageMain" class=" thirdPageMain">
+      <div class= "username-chat-area">
+        <form method='post' id='username-chat-form' class="username-chat-input">
+          <input type='text' id='username-text' class='username-chat-form__input' placeholder='Введите имя пользователя'>
+          <input type='submit' class='username-chat-form__submit' value='Enter'>
+        </form>
+      </div>
+
+      <div class='message-chat-area'>
+        <form method='post' id='message-chat-form' class="message-chat-input">
+          <input type='text' id='message-text' class='message-chat-form__input' placeholder='Введите сообщение'>
+          <input type='submit' class='message-chat-form__submit' value='Enter'>
+        </form>
+      </div>
+      
+          <!-- <div class='chat-messages'>
+              <div class='chat-messages__content' id='messages'>
+                  Загрузка...
+              </div>
+          </div>-->
+
+          
+              
+          
+    </main>
 
     <footer id="footer" class="footer">
       &copy; Copyright 2024 TTWeb-site

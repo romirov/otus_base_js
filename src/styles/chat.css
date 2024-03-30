@@ -1,64 +1,114 @@
-.chat {
+* {
+  margin: 0 auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+.thirdPageHeader {
+  margin-bottom: 2rem;
+}
+
+.thirdPageHH {
+  margin-left: 40rem;
+}
+
+.thirdPageMain {
+  display: grid;
+  grid-template-columns: 22rem 96rem;
+  grid-template-rows: 50rem 10rem;
+  margin-bottom: 2.7rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border: 1px solid #333;
-  margin: 15px;
-  width: 40%;
-  height: 70%;
+  width: auto;
+  height: 45rem;
   background: #555;
   color: #fff;
 }
 
-.chat-messages {
-  min-height: 93%;
-  max-height: 93%;
-  overflow: auto;
+.username-chat-area {
+  grid-column: 1/2;
+  border: 2px solid blue;
+  width: 20rem;
+  margin: 1rem;
+  height: 43rem;
 }
 
-.chat-messages__content {
-  padding: 1px;
+.username-chat-input {
+  grid-column: 1;
+  grid-row: 2;
+  min-height: 8%;
+  margin-left: 1rem;
+  margin-top: 40rem;
 }
 
-.chat__message {
-  border-left: 3px solid #333;
-  margin-top: 2px;
-  padding: 2px;
-}
-
-.chat__message_black {
-  border-color: #000;
-}
-
-.chat__message_blue {
-  border-color: blue;
-}
-
-.chat__message_green {
-  border-color: green;
-}
-
-.chat__message_red {
-  border-color: red;
-}
-
-.chat-input {
-  min-height: 6%;
-}
-
-input {
-  font-family: arial;
-  font-size: 16px;
+.username-chat-form__input {
   vertical-align: middle;
   background: #333;
   color: #fff;
   border: 0;
   display: inline-block;
   margin: 1px;
-  height: 30px;
+  width: 15rem;
+  height: 1.5rem;
 }
 
-.chat-form__input {
-  width: 79%;
+.username-chat-form__submit {
+  width: 3rem;
 }
 
-.chat-form__submit {
-  width: 18%;
+.message-chat-area {
+  grid-column: 2/2;
+  border: 2px solid blue;
+  width: 93rem;
+  margin: 1rem;
+  height: 43rem;
+}
+
+.message-chat-input {
+  grid-column: 2;
+  grid-row: 2;
+  min-height: 8%;
+  margin-left: 1rem;
+  margin-top: 40rem;
+}
+
+.message-chat-form__input {
+  vertical-align: middle;
+  background: #333;
+  color: #fff;
+  border: 0;
+  display: inline-block;
+  width: 87rem;
+  height: 1.5rem;
+}
+
+.message-chat-form__submit {
+  width: 4rem;
+}
+
+/* .chat-messages {
+  grid-column: 2;
+  grid-row: 1;
+  min-height: 93%;
+  max-height: 93%;
+}
+
+.chat-messages__content {
+  padding: 1px;
+  margin-left: 90rem;
+}
+
+
+
+
+
+
+
+ */
+
+.footer {
+  margin-left: 50rem;
 }
