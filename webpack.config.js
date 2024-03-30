@@ -4,12 +4,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    index: "./src/script.js",
+    main: "./src/script.js",
     article: "./src/article.js",
     chat: "./src/chat.js",
   },
   output: {
-    filename: "main.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
@@ -20,7 +20,7 @@ module.exports = {
       title: "Base template",
       // Load a custom template
       template: "index.html",
-      chunks: ["index"],
+      chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
       title: "Article template",
