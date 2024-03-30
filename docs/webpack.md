@@ -169,10 +169,12 @@ import css from "style.css";
 Добавляем строки в webpack.config.js
 
 ```
-rules: [
-    {
-      test: /\.css$/i,
-      use: ["style-loader", "css-loader"],
-    },
-  ],
+module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 ```
