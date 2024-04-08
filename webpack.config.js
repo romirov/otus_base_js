@@ -1,6 +1,8 @@
 const path = require("path");
 // eslint-disable-next-line import/no-extraneous-dependencies
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// eslint-disable-next-line import/no-extraneous-dependencies
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -23,6 +25,9 @@ module.exports = {
       template: "index.html",
       chunks: ["main"],
       filename: "index.html",
+    }),
+    new CopyPlugin({
+      patterns: [{ from: "src/imgs", to: "imgs" }],
     }),
     new HtmlWebpackPlugin({
       title: "Article template",

@@ -7,7 +7,7 @@ html {
 }
 
 .firstPagesHeader {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .firstPagesHH {
@@ -16,7 +16,63 @@ html {
 
 .articlesHeader {
   margin-left: 55rem;
-  margin-bottom: 2rem;
+}
+
+.carousel {
+  margin-left: 45rem;
+  width: 450px;
+  height: 350px;
+}
+
+.arrow {
+  padding: 0;
+  background: #ddd;
+  border-radius: 15px;
+  border: 1px solid gray;
+  font-size: 24px;
+  line-height: 24px;
+  color: #444;
+  display: block;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.arrow:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+
+.prev {
+  margin-left: 5rem;
+}
+
+.next {
+  margin-left: 20rem;
+  margin-top: -1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul img {
+  width: 350px;
+  height: 250px;
+  display: block; /* убираем пустое место вокруг картинок */
+}
+
+ul li {
+  display: inline-block; /* убираем пустое место между элементами списка */
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
 }
 
 .articles {
@@ -26,15 +82,11 @@ html {
   width: 1750px;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  margin-bottom: 25rem;
+  margin-bottom: 5rem;
 }
 
 .gridItem {
   text-align: center;
-}
-
-.gridItemHeader {
-  margin-bottom: 1rem;
 }
 
 .footer {
